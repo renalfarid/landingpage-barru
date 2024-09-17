@@ -6,23 +6,23 @@
     // JSON data
     const carouselData = [
       {
-        "src": "/assets/images/banner-1.png",
+        "src": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "/assets/images/banner-1.png",
+        "src": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "/assets/images/banner-1.png",
+        "src": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "/assets/images/banner-1.png",
+        "src": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "/assets/images/banner-1.png",
+        "src": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       }
     ];
