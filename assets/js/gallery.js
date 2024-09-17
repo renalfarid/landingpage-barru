@@ -1,27 +1,27 @@
 const images = [
     {
-        "src": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg",
-        "alt": "Image 1"
+        "src": "/assets/images/aktifitas/kunjungan-presiden.webp",
+        "alt": "Kunjungan presiden RI"
     },
     {
-        "src": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-        "alt": "Image 2"
+        "src": "/assets/images/aktifitas/reses-2.jpg",
+        "alt": "Reses DPRD Sulsel"
     },
     {
-        "src": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-        "alt": "Image 3"
+        "src": "/assets/images/aktifitas/halal-bihalal.jpeg",
+        "alt": "Halal bil halal"
     },
     {
-        "src": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-        "alt": "Image 4"
+        "src": "/assets/images/aktifitas/kunjungan-sekolah.jpg",
+        "alt": "Kunjungan sekolah"
     },
     {
-        "src": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-        "alt": "Image 5"
+        "src": "/assets/images/aktifitas/sosialisasi-nilai.jpg",
+        "alt": "Sosialisasi nilai kebangsaan"
     },
     {
-        "src": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
-        "alt": "Image 6"
+        "src": "/assets/images/aktifitas/deklarasi-inimibarru.jpg",
+        "alt": "Deklarasi inimi barru 2024"
     }
     // Add more images here
 ];
