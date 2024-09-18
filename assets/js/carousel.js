@@ -6,23 +6,28 @@
     // JSON data
     const carouselData = [
       {
-        "src": "./assets/images/banner-1.png",
+        "srcDesktop": "./assets/images/banner-1.png",
+        "srcMobile": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "./assets/images/banner-1.png",
+        "srcDesktop": "./assets/images/banner-1.png",
+        "srcMobile": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "./assets/images/banner-1.png",
+        "srcDesktop": "./assets/images/banner-1.png",
+        "srcMobile": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "./assets/images/banner-1.png",
+        "srcDesktop": "./assets/images/banner-1.png",
+        "srcMobile": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       },
       {
-        "src": "./assets/images/banner-1.png",
+        "srcDesktop": "./assets/images/banner-1.png",
+        "srcMobile": "./assets/images/banner-1.png",
         "alt": "Description of Image 1"
       }
     ];
@@ -33,7 +38,12 @@
       carouselItem.classList.add('hidden', 'duration-700', 'ease-in-out');
       if (index === 0) carouselItem.classList.add('block'); // Show the first item initially
       carouselItem.setAttribute('data-carousel-item', '');
-      carouselItem.innerHTML = `<img src="${item.src}" class="w-full h-full object-cover" alt="${item.alt}">`;
+
+      // Cek jika layar adalah mobile (lebar kurang dari 768px)
+     const imageSrc = window.innerWidth < 768 ? item.srcMobile : item.srcDesktop;
+
+      carouselItem.innerHTML = `<img src="${imageSrc}" class="w-full h-full object-cover" alt="${item.alt}">`;
+
       carouselItemsContainer.appendChild(carouselItem);
 
       // Generate indicators
