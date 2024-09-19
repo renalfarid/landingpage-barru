@@ -124,7 +124,7 @@
   
       <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <a
-          class="block rounded-xl border border-yellow-300 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-white-800/10"
+          class="block rounded-xl border border-dashed border-orange-500 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-white-800/10"
           href="#"
         >
         <svg
@@ -150,7 +150,7 @@
         </a>
   
         <a
-          class="block rounded-xl border border-yellow-300 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
+          class="block rounded-xl border border-dashed border-orange-500 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
           href="#"
         >
           <svg
@@ -180,7 +180,7 @@
         </a>
   
         <a
-          class="block rounded-xl border border-yellow-300 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
+          class="block rounded-xl border border-dashed border-orange-500 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
           href="#"
         >
         <svg width="30px" height="30px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -197,7 +197,7 @@
         </a>
   
         <a
-          class="block rounded-xl border border-yellow-300 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
+          class="block rounded-xl border border-dashed border-orange-500 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
           href="#"
         >
         <svg fill="#F59E0B" width="30px" height="30px" viewBox="0 0 50 50" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" overflow="inherit"><path d="M48.022 26.652c-1.396 6.519-6.192 11.874-12.516 13.976-1.94.646-3.95.973-5.975.973-8.149 0-15.354-5.19-17.93-12.914-1.595-4.781-1.229-9.896 1.03-14.404 2.259-4.507 6.141-7.867 10.93-9.46 4.505-1.496 9.397-1.246 13.71.689l.935-1.763c-6.263-3.869-14.064-4.795-21.078-2.462-6.343 2.109-11.484 6.559-14.476 12.528-2.992 5.97-3.476 12.746-1.364 19.08 3.412 10.231 12.955 17.105 23.747 17.105 2.682 0 5.343-.433 7.911-1.286 9.573-3.184 16.266-11.73 17.052-21.774l-1.976-.288zm-12.325-12.049l-5.014-9.384-2.55 10.477-10.429 2.05 9.547 5.421-1.642 10.796 8.107-7.374 10.046 4.82-5.131-10.027 8.124-7.842z"/></svg>
@@ -209,7 +209,7 @@
         </a>
   
         <a
-          class="block rounded-xl border border-yellow-300 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
+          class="block rounded-xl border border-dashed border-orange-500 p-8 shadow-xl transition hover:border-yellow-500 hover:shadow-gray-500/10"
           href="#"
         >
         <svg fill="#F59E0B" width="30px" height="30px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -244,11 +244,143 @@
         <a
           href="#"
           class="inline-block rounded bg-yellow-600 px-12 py-3 text-sm font-semibold text-white transition hover:bg-yellow-700 focus:outline-none focus:ring focus:ring-yellow-400"
+          onclick="toggleModal(true)"
         >
           Beri Dukungan
         </a>
       </div>
+
+    <!-- Modal -->
+    <div id="supportModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen px-4 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+    
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+    
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full max-w-md p-4 sm:p-6"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-headline"
+        >
+            <div class="flex justify-between items-center pb-3">
+            <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-headline">
+                Bergabung dengan ADAMI BARRU 2024
+            </h3>
+            <button onclick="toggleModal(false)" class="text-gray-400 hover:text-gray-600">
+                &#x2715; <!-- Close button (X) -->
+            </button>
+            </div>
+    
+            <!-- Form -->
+            <form id="supportForm" class="space-y-4" onsubmit="submitForm(event)">
+            <!-- NIK -->
+            <div>
+                <label for="nik" class="block text-sm font-medium text-gray-700">NIK</label>
+                <input
+                type="text"
+                name="nik"
+                id="nik"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Nomor Induk Kependudukan"
+                />
+            </div>
+    
+            <!-- Name -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Nama lengkap"
+                />
+            </div>
+    
+            <!-- Address -->
+            <div>
+                <label for="address" class="block text-sm font-medium text-gray-700">Alamat</label>
+                <textarea
+                name="address"
+                id="address"
+                rows="3"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Alamat lengkap"
+                ></textarea>
+            </div>
+    
+            <!-- Kab / Kota -->
+            <div>
+                <label for="kab" class="block text-sm font-medium text-gray-700">Kabupaten / Kota</label>
+                <input
+                type="text"
+                name="kab"
+                id="kab"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Kab / Kota"
+                />
+            </div>
+    
+            <!-- Kecamatan -->
+            <div>
+                <label for="kecamatan" class="block text-sm font-medium text-gray-700">Kecamatan</label>
+                <input
+                type="text"
+                name="kecamatan"
+                id="kecamatan"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Kecamatan"
+                />
+            </div>
+    
+            <!-- Kelurahan -->
+            <div>
+                <label for="kelurahan" class="block text-sm font-medium text-gray-700">Kelurahan</label>
+                <input
+                type="text"
+                name="kelurahan"
+                id="kelurahan"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Kelurahan"
+                />
+            </div>
+    
+            <!-- WA Number -->
+            <div>
+                <label for="no_wa" class="block text-sm font-medium text-gray-700">Nomor WA</label>
+                <input
+                type="text"
+                name="no_wa"
+                id="no_wa"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                placeholder="Nomor WhatsApp"
+                />
+            </div>
+
+            <div>
+                <span id="response"></span>
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="mt-4">
+                <button
+                type="submit"
+                class="w-full rounded-md bg-yellow-600 px-4 py-2 text-white hover:bg-yellow-700"
+                >
+                Kirim Dukungan
+                </button>
+            </div>
+            </form>
+        </div>
+        </div>
     </div>
+
+  </div>
+</div>
+
 </section>
 
   <footer class="bg-gradient-to-r from-yellow-300 to-orange-400">
@@ -330,7 +462,14 @@
         }
       });
     });
+    function toggleModal(show) {
+      const modal = document.getElementById('supportModal');
+      modal.classList.toggle('hidden', !show);
+    }
+
+    
   </script>
   <script src="./assets/js/carousel.js"></script>
+  <script src="./assets/js/dukungan.js"></script>
 </body>
 </html>
