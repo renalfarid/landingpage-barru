@@ -4,7 +4,7 @@ function submitForm(event) {
     const formData = new FormData(document.getElementById('supportForm'));
     const data = Object.fromEntries(formData.entries()); // Convert FormData to an object
 
-      fetch('https://inimibaru.com/landing-api/join', {
+      fetch('https://inimibarru.com/landing-api/join', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
