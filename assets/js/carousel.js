@@ -7,28 +7,28 @@
     const carouselData = [
       {
         "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-1.png",
-        "alt": "Description of Image 1"
+        "srcMobile": "./assets/images/banner-768.png",
+        "alt": "inimi barru 2024"
       },
       {
         "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-1.png",
-        "alt": "Description of Image 1"
+        "srcMobile": "./assets/images/banner-768.png",
+        "alt": "inimi barru 2024"
       },
       {
         "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-1.png",
-        "alt": "Description of Image 1"
+        "srcMobile": "./assets/images/banner-768.png",
+        "alt": "inimi barru 2024"
       },
       {
         "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-1.png",
-        "alt": "Description of Image 1"
+        "srcMobile": "./assets/images/banner-768.png",
+        "alt": "inimi barru 2024"
       },
       {
         "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-1.png",
-        "alt": "Description of Image 1"
+        "srcMobile": "./assets/images/banner-768.png",
+        "alt": "inimi barru 2024"
       }
     ];
 
@@ -40,7 +40,7 @@
       carouselItem.setAttribute('data-carousel-item', '');
 
       // Cek jika layar adalah mobile (lebar kurang dari 768px)
-     const imageSrc = window.innerWidth < 768 ? item.srcMobile : item.srcDesktop;
+     const imageSrc = window.innerWidth <= 1024 ? item.srcMobile : item.srcDesktop;
 
       carouselItem.innerHTML = `<img src="${imageSrc}" class="w-full h-full object-cover" alt="${item.alt}">`;
 
