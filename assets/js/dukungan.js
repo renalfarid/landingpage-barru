@@ -1,3 +1,7 @@
+function toggleModal(show) {
+    const modal = document.getElementById('supportModal');
+    modal.classList.toggle('hidden', !show);
+  }
 function submitForm(event) {
     event.preventDefault(); // Prevent the default form submission behavior
 
@@ -17,6 +21,7 @@ function submitForm(event) {
       if (data.success) {
           responseSpan.innerText = 'Dukungan berhasil dikirim!'; // Success message
           responseSpan.style.color = 'green';
+          toggleModal(false);
       } else {
           responseSpan.innerText = `Gagal: ${data.error}`; // Error message returned from server
           responseSpan.style.color = 'red';
