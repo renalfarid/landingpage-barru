@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/assets/blog/posts.json')
         .then(response => response.json())
         .then(data => {
+            // Sort data berdasarkan id descending (besar ke kecil)
+            data.sort((a, b) => b.id - a.id);
+
             const blogList = document.getElementById('blog-list');
             data.forEach(post => {
                 const postElement = document.createElement('article');
