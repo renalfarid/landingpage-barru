@@ -229,12 +229,12 @@
       // blog 
       const params = new URLSearchParams(window.location.search);
             const slug = params.get('post');
-
-            fetch('../assets/blog/posts.json')
+            if (slug) {
+              fetch('../assets/blog/posts.json')
                 .then(response => response.json())
                 .then(data => {
                     const post = data.find(post => post.slug === slug);
-                    console.log("berita :", post.title)
+                    console.log("berita :", post)
                     if (post) {
                         const blogPost = document.getElementById('blog-post');
 
@@ -253,7 +253,35 @@
                     } else {
                         document.getElementById('blog-post').innerHTML = '<p>Post not found!</p>';
                     }
-                });
+                })
+            } else {
+              document.getElementById('blog-post').innerHTML = '<p>URL salah</p>';
+            }
+
+            /* fetch('../assets/blog/posts.json')
+                .then(response => response.json())
+                .then(data => {
+                    const post = data.find(post => post.slug === slug);
+                    console.log("berita :", post)
+                    if (post) {
+                        const blogPost = document.getElementById('blog-post');
+
+                        // Menggunakan innerHTML untuk menampilkan konten HTML dari JSON
+                        blogPost.innerHTML = `
+                            <img src="${post.thumbnail}" alt="${post.title}" class="mb-4 w-full h-64 object-cover rounded-lg shadow" />
+                            <h1 class="text-3xl font-bold mb-4">${post.title}</h1>
+                            <p class="text-sm text-gray-500 mb-4">${post.author} - ${new Date(post.date).toLocaleDateString()}</p>
+                            <div id="post-content">${post.content}</div>
+                        `;
+
+                        // Menambahkan class "mt-4" pada setiap <p> di dalam content
+                        const postContent = blogPost.querySelector('#post-content');
+                        const paragraphs = postContent.querySelectorAll('p');
+                        paragraphs.forEach(p => p.classList.add('mt-4'));
+                    } else {
+                        document.getElementById('blog-post').innerHTML = '<p>Post not found!</p>';
+                    }
+                });*/
     });
   </script>
   <script src="../assets/blog/js/blog.js"></script>
