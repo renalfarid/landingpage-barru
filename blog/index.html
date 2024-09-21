@@ -234,6 +234,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const post = data.find(post => post.slug === slug);
+                    console.log("berita :", post.title)
                     if (post) {
                         const blogPost = document.getElementById('blog-post');
 
