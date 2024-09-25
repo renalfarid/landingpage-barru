@@ -6,28 +6,28 @@
     // JSON data
     const carouselData = [
       {
-        "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-768.png",
+        "srcDesktop": "./assets/images/slider/slider01.png",
+        "srcMobile": "./assets/images/slider/mobile01.png",
         "alt": "inimi barru 2024"
       },
       {
-        "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-768.png",
+        "srcDesktop": "./assets/images/slider/slider02.png",
+        "srcMobile": "./assets/images/slider/mobile02.png",
         "alt": "inimi barru 2024"
       },
       {
-        "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-768.png",
+        "srcDesktop": "./assets/images/slider/slider03.png",
+        "srcMobile": "./assets/images/slider/mobile03.png",
         "alt": "inimi barru 2024"
       },
       {
-        "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-768.png",
+        "srcDesktop": "./assets/images/slider/slider04.png",
+        "srcMobile": "./assets/images/slider/mobile04.png",
         "alt": "inimi barru 2024"
       },
       {
-        "srcDesktop": "./assets/images/banner-1.png",
-        "srcMobile": "./assets/images/banner-768.png",
+        "srcDesktop": "./assets/images/slider/slider05.png",
+        "srcMobile": "./assets/images/slider/mobile05.png",
         "alt": "inimi barru 2024"
       }
     ];
