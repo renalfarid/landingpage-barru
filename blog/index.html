@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="INIMI BARRU 2024 Perubahan semakin tertata Hj Andi Ina Kartika Sari - Abustan.">
+    <meta name="description" content="Halaman Berita - INIMI BARRU 2024 Perubahan semakin tertata Hj Andi Ina Kartika Sari - Abustan.">
     
-    <meta property="og:title" content="INIMI BARRU2024 - Profil Andi Ina" />
-    <meta property="og:url" content="https://inimibarru.com/profile.html" />
-    <meta property="og:description" content="Perubahan semakin tertata Hj Andi Ina Kartika Sari - Abustan" />
+    <meta property="og:title" content="INIMI BARRU2024 -  Berita" />
+    <meta property="og:url" content="https://inimibarru.com/blog" />
+    <meta property="og:description" content="Halaman Berita Perubahan semakin tertata Hj Andi Ina Kartika Sari - Abustan" />
     <meta property="og:image" content="https://inimibarru.com/assets/blog/images/gen-z-inimibarru.jpg" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="id_ID" />
 
-    <title>INIMI BARRU2024 - Profil Andi Ina</title>
+    <title>INIMI BARRU2024 - Berita</title>
 
     <link rel="icon" type="image/x-icon" href="../assets/images/inimibarru.ico">
     <link href="../assets/css/style.min.css" rel="stylesheet">
@@ -247,6 +247,11 @@
                         const postContent = blogPost.querySelector('#post-content');
                         const paragraphs = postContent.querySelectorAll('p');
                         paragraphs.forEach(p => p.classList.add('mt-4'));
+
+                        document.querySelector('meta[property="og:title"]').setAttribute("content", `${post.title}`);
+                        document.querySelector('meta[property="og:url"]').setAttribute("content", `https://inimibarru.com/blog/${post.slug}`);
+                        document.querySelector('meta[property="og:description"]').setAttribute("content", post.description);
+                        document.querySelector('meta[property="og:image"]').setAttribute("content", `https://inimibarru.com${post.thumbnail}`)
                     } else {
                         document.getElementById('blog-post').innerHTML = '<p>Post not found!</p>';
                     }
