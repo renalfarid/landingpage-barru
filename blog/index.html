@@ -250,6 +250,7 @@
 
                         document.querySelector('meta[property="og:title"]').setAttribute("content", `${post.title}`);
                         document.querySelector('meta[property="og:url"]').setAttribute("content", `https://inimibarru.com/blog/${post.slug}`);
+                        document.querySelector('meta[property="description"]').setAttribute("content", post.description);
                         document.querySelector('meta[property="og:description"]').setAttribute("content", post.description);
                         document.querySelector('meta[property="og:image"]').setAttribute("content", `https://inimibarru.com${post.thumbnail}`)
                     } else {
