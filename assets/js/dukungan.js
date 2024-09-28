@@ -4,10 +4,16 @@ function toggleModal(show) {
   }
 function submitForm(event) {
     event.preventDefault(); // Prevent the default form submission behavior
+    const kecamatanSelect = document.getElementById('kecamatan');
+    const selectedOption = kecamatanSelect.options[kecamatanSelect.selectedIndex];
+    const selectedKecamatan = selectedOption.textContent;
+
+    
 
     const formData = new FormData(document.getElementById('supportForm'));
-    const data = Object.fromEntries(formData.entries()); // Convert FormData to an object
-
+    let data = Object.fromEntries(formData.entries()); // Convert FormData to an object
+    data.kecamatan = selectedKecamatan
+    
       fetch('https://inimibarru.com/landing-api/join', {
       method: 'POST',
       headers: {
